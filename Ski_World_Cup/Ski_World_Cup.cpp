@@ -121,8 +121,8 @@ int main()
     lesParticipants[31] = P32;
 
 	//Les participations à la CourseSlalom S
-	CourseSlalom S("Kitzbühe", "20/01/2025", lesParticipants);
-	S.afficherParticipants();//sans dossard
+    CourseSlalom S("Kitzbühel", "20/01/2025", lesParticipants);
+    S.afficherParticipants();//sans dossard
 	cout << "---------------------------------------------------------------------------------------------------------- \n";
 	S.traitementDossards();//attribuer les dossards
 	S.afficherParticipants();//avec dossard

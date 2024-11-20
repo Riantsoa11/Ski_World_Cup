@@ -3,6 +3,13 @@
 
 using namespace std;
 
+Participation::Participation() {
+	numDossard = 0;
+	classement = 0;
+	leCompetiteur = nullptr; 
+}
+
+
 // Constructeur
 Participation::Participation(int dossard, int classement, Competiteur* competiteur) {
 	numDossard = dossard;

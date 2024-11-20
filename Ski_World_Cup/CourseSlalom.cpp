@@ -4,9 +4,20 @@
 
 using namespace std;
 
-CourseSlalom::CourseSlalom(string nom, string date) : Course(nom, date) {
-    // Initialisation spécifique à la course de Slalom, si nécessaire
+CourseSlalom::CourseSlalom(string nom, string date, Participation* participants) : Course(nom, date) {
+    // Réinitialiser lesParticipants
+    nbParticipants = 0;
+    for (int i = 0; i < 100; i++) {
+        lesParticipants[i] = nullptr;
+    }
+
+    // Ajouter le participant passé en argument
+    if (participants != nullptr) {
+        lesParticipants[nbParticipants++] = participants;
+    }
 }
+
+
 
 void CourseSlalom::traitementDossards() {
     // Appliquer le classement des participants en utilisant la méthode privée
@@ -20,11 +31,12 @@ void CourseSlalom::traitementDossards() {
 }
 
 void CourseSlalom::attribuerDossards() {
-    // Cette méthode attribue les dossards aux participants
-    for (int i = 0; i < nbParticipants; i++) {
-        lesParticipants[i]->setNumDossard(i + 1); // Dossard assigné dans l'ordre du classement
-    }
-    cout << "Dossards attribués aux participants de la course de Slalom." << endl;
+	// Attribuer les dossards aux participants
+	for (int i = 0; i < nbParticipants; i++) {
+		lesParticipants[i]->setNumDossard(i + 1);
+	}
+	cout << "Dossards attribués aux participants pour la course de Slalom." << endl;
+
 }
 
 void CourseSlalom::classesLesParticipants() {

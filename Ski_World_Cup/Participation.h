@@ -15,8 +15,9 @@ class Participation
 
 	public:
 		//Constructeur
-		Participation(int dossard,int classement, Competiteur* competiteur);
 		Participation();
+		Participation(int dossard,int classement, Competiteur* competiteur);
+		
 		//Getters et setters pour numDossard et classement 
 		int getNumDossard();
 		void setNumDossard(int dossard);

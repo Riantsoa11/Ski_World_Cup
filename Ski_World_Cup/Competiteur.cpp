@@ -27,6 +27,7 @@ int Competiteur::getNumeroCompetiteur()
 	return numeroCompetiteur;
 }
 
+
 string Competiteur::getNomCompetiteur()
 {
 	return nomCompetiteur;
